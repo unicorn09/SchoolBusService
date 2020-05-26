@@ -31,7 +31,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/components" component={Components}/>
+                <Route path="/components" component={Dashboards}/>
             </Suspense>
 
             {/* Forms */}
@@ -46,7 +46,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/forms" component={Forms}/>
+                <Route path="/forms" component={Dashboards}/>
             </Suspense>
 
             {/* Charts */}
@@ -61,7 +61,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/charts" component={Charts}/>
+                <Route path="/charts" component={Dashboards}/>
             </Suspense>
 
             {/* Tables */}
@@ -76,7 +76,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/tables" component={Tables}/>
+                <Route path="/tables" component={Dashboards}/>
             </Suspense>
 
             {/* Elements */}
@@ -91,7 +91,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/elements" component={Elements}/>
+                <Route path="/elements" component={Dashboards}/>
             </Suspense>
 
             {/* Dashboard Widgets */}
@@ -106,7 +106,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/widgets" component={Widgets}/>
+                <Route path="/widgets" component={Dashboards}/>
             </Suspense>
 
             {/* Dashboards */}

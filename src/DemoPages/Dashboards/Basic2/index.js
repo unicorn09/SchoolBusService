@@ -24,8 +24,7 @@ import {
     ComposedChart,
     CartesianGrid,
     Tooltip,
-    LineChart,
-    
+    LineChart
 } from 'recharts';
 
 import {
@@ -90,7 +89,7 @@ export default class AnalyticsDashboard1 extends Component {
                         <Row>
                             <Col md="12">
                                 <Card className="main-card mb-3">
-                                    <div className="card-header">St. Michael's High School
+                                    <div className="card-header">St. Michael's Primary
                                         <div className="btn-actions-pane-right">
                                             <div role="group" className="btn-group-sm btn-group">
                                             <UncontrolledButtonDropdown direction="left" className="mb-2 mr-2">
@@ -106,7 +105,8 @@ export default class AnalyticsDashboard1 extends Component {
                                                 <DropdownItem>Route 7</DropdownItem>
                                                 <DropdownItem>Route 8</DropdownItem>
                                             </DropdownMenu>
-                                        </UncontrolledButtonDropdown></div>
+                                        </UncontrolledButtonDropdown>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="table-responsive">
@@ -146,7 +146,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -172,7 +172,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-success">Completed</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
 
@@ -199,7 +199,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
 
@@ -226,7 +226,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
 
@@ -253,7 +253,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -279,7 +279,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -305,7 +305,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -331,7 +331,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -357,7 +357,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -383,7 +383,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -409,7 +409,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -435,7 +435,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -461,7 +461,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-warning">Pending</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -487,7 +487,7 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-danger">In Progress</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -512,13 +512,16 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="badge badge-info">On Hold</div>
                                                 </td>
                                                 <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Send Reminder</button>
+                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                   
+                                    <div className="d-block text-center card-footer">
+                                        <button className="mr-2 btn-icon btn-icon-only btn btn-outline-danger"><i className="pe-7s-trash btn-icon-wrapper"> </i></button>
+                                        <button className="btn-wide btn btn-success">Save</button>
+                                    </div>
                                 </Card>
                             </Col>
                         </Row></ReactCSSTransitionGroup></Fragment>

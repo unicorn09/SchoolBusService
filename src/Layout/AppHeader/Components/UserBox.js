@@ -105,9 +105,10 @@ class UserBox extends React.Component {
                                         id="Tooltip-1">
                                     <FontAwesomeIcon className="mr-2 ml-2" icon={faCalendarAlt}/>
                                 </Button>
-                                <UncontrolledTooltip placement="bottom" target={'Tooltip-1'}>
+                                {/* <UncontrolledTooltip placement="bottom" target={'Tooltip-1'}>
                                     Click for Toastify Notifications!
-                                </UncontrolledTooltip>
+                                </UncontrolledTooltip> */}
+                                
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ class AppFooter extends React.Component {
                         <div className="app-footer-right">
                             <ul className="nav">
                                 <li className="nav-item">
-                                    <a href="javascript:void(0);" className="nav-link">
+                                    <a href="http://www.harshraj.in.net/" className="nav-link" target="_blank">
                                         <div className="badge badge-success mr-1 ml-0">
                                             <small>Unicorn</small>
                                         </div>

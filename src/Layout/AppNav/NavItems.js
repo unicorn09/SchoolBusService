@@ -170,19 +170,24 @@ export const ComponentsNav = [
 export const FormsNav = [
     {
         icon: 'pe-7s-light',
-        label: 'Controls',
-        to: '#/forms/controls',
+        label: "St. Michael's High School",
+        to: '#/dashboards/basic',
     },
     {
         icon: 'pe-7s-eyedropper',
-        label: 'Layouts',
-        to: '#/forms/layouts',
+        label: "St. Xavier's High School",
+        to: '#/dashboards/basic1',
     },
     {
         icon: 'pe-7s-pendrive',
-        label: 'Validation',
-        to: '#/forms/validation',
+        label: "St. Michael's Primary",
+        to: '#/dashboards/basic2',
     },
+    {
+        icon: 'pe-7s-pendrive',
+        label: "St. Xavier's Primary",
+        to: '#/dashboards/basic3',
+    }
 ];
 export const WidgetsNav = [
     {
