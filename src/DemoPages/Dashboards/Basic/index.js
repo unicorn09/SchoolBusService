@@ -24,8 +24,7 @@ import {
     ComposedChart,
     CartesianGrid,
     Tooltip,
-    LineChart,
-    
+    LineChart
 } from 'recharts';
 
 import {
@@ -38,10 +37,10 @@ import {
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import avatar1 from '../../../assets/utils/images/avatars/1.jpg';
-import avatar2 from '../../../assets/utils/images/avatars/2.jpg';
-import avatar3 from '../../../assets/utils/images/avatars/3.jpg';
-import avatar4 from '../../../assets/utils/images/avatars/4.jpg';
+import avatar1 from '../../../assets/utils/images/avatars/1.png';
+import avatar2 from '../../../assets/utils/images/avatars/1.png';
+import avatar3 from '../../../assets/utils/images/avatars/1.png';
+import avatar4 from '../../../assets/utils/images/avatars/1.png';
 
 
 
@@ -53,12 +52,33 @@ export default class AnalyticsDashboard1 extends Component {
         this.state = {
             dropdownOpen: false,
             activeTab1: '11',
-
+            students: [
+                   { id: 1, name: 'Harsh', dues: 2100, standard: '1A',stoppage:"kankarbagh" },
+                   { id: 2, name: 'Raj', dues: 1500, standard: '5B',stoppage:"kankarbagh" },
+                   { id: 3, name: 'Shubham Raj', dues: 2100, standard: '1A',stoppage:"kankarbagh" },
+                   { id: 4, name: 'Shubham Gupta', dues: 1500, standard: '5B',stoppage:"kankarbagh" },
+                   { id: 5, name: 'Harsh Verma', dues: 2100, standard: '1A',stoppage:"kankarbagh" },
+                   { id: 6, name: 'Shahrukh Khan', dues: 1500, standard: '5B',stoppage:"kankarbagh" }
+                ],
+                dropDownValue:'Route 1'
         };
         this.toggle = this.toggle.bind(this);
         this.toggle1 = this.toggle1.bind(this);
-
+        this.changeValue=this.changeValue.bind(this);
+        this.notify=this.notify.bind(this);
     }
+
+    changeValue(e) {
+        this.setState({dropDownValue: e.currentTarget.textContent})
+      }
+
+    notify = () => this.toastId = toast("Message Send Successfully", {
+        transition: Bounce,
+        closeButton: true,
+        autoClose: 5000,
+        position: 'bottom-center',
+        type: 'success'
+    });
 
     toggle() {
         this.setState(prevState => ({
@@ -73,7 +93,39 @@ export default class AnalyticsDashboard1 extends Component {
             });
         }
     }
-  
+    renderTableData() {
+        return this.state.students.map((student, index) => {
+           const { id, name, standard, stoppage,dues } = student 
+           return (
+            <tr key="id">
+            <td className="text-center text-muted">{id}</td>
+            <td>
+                <div className="widget-content p-0">
+                    <div className="widget-content-wrapper">
+                        <div className="widget-content-left mr-3">
+                            <div className="widget-content-left">
+                                <img width={40} className="rounded-circle" src={avatar4} alt="Avatar" />
+                            </div>
+                        </div>
+                        <div className="widget-content-left flex2">
+                            <div className="widget-heading">{name}</div>
+           <div className="widget-subheading opacity-7">{standard}</div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td className="text-center">{stoppage}</td>
+           <td className="text-center">{dues}</td>
+            <td className="text-center">
+                <div className="badge badge-warning">Pending</div>
+            </td>
+            <td className="text-center">
+                <button type="button" className="btn btn-primary btn-sm" onClick={this.notify}>Send Reminder</button>
+            </td>
+        </tr>
+           )
+        })
+     }
 
     render() {
   
@@ -94,19 +146,20 @@ export default class AnalyticsDashboard1 extends Component {
                                         <div className="btn-actions-pane-right">
                                             <div role="group" className="btn-group-sm btn-group">
                                             <UncontrolledButtonDropdown direction="left" className="mb-2 mr-2">
-                                            <Button className="btn-wide" color="primary">Route </Button>
+                                            <Button className="btn-wide" color="primary">{this.state.dropDownValue}</Button>
                                             <DropdownToggle className="dropdown-toggle-split" caret color="primary"/>
                                             <DropdownMenu>
-                                                <DropdownItem>Route 1</DropdownItem>
-                                                <DropdownItem>Route 2</DropdownItem>
-                                                <DropdownItem>Route 3</DropdownItem>
-                                                <DropdownItem>Route 4</DropdownItem>
-                                                <DropdownItem>Route 5</DropdownItem>
-                                                <DropdownItem>Route 6</DropdownItem>
-                                                <DropdownItem>Route 7</DropdownItem>
-                                                <DropdownItem>Route 8</DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 1</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 2</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 3</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 4</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 5</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 6</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 7</div></DropdownItem>
+                                                <DropdownItem><div onClick={this.changeValue}>Route 8</div></DropdownItem>
                                             </DropdownMenu>
-                                        </UncontrolledButtonDropdown></div>
+                                        </UncontrolledButtonDropdown>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="table-responsive">
@@ -123,6 +176,7 @@ export default class AnalyticsDashboard1 extends Component {
                                             </tr>
                                             </thead>
                                             <tbody>
+                                            {this.renderTableData()}
                                             <tr>
                                                 <td className="text-center text-muted">#345</td>
                                                 <td>
